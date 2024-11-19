@@ -1,0 +1,154 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &__side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 30rem;
+    height: 42.6rem;
+    box-shadow: 0 0.5rem 2rem #281a4a;
+    border-radius: 1rem;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+
+    &--back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(-180deg);
+      width: 30rem;
+      height: 42.6rem;
+      justify-content: center;
+      gap: 4rem;
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(#d99585, 0.7),
+          rgba(#6b578f, 0.7)
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(#5e8e6f, 0.7),
+          rgba(#6b578f, 0.7)
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(#6499cd, 0.7),
+          rgba(#6b578f, 0.7)
+        );
+      }
+    }
+  }
+
+  &__price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__price-only {
+    text-transform: to-upper-case;
+    font-size: 2rem;
+  }
+
+  &__price-value {
+    font-size: 5.5rem;
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
+
+.side__header {
+  position: relative;
+  font-size: 2.2rem;
+
+  &--text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+
+    &--peach {
+      background-color: rgba(#d99585, 0.8);
+    }
+    &--green {
+      background-color: rgba(#5e8e6f, 0.8);
+    }
+    &--blue {
+      background-color: rgba(#6499cd, 0.8);
+    }
+  }
+
+  &--img {
+    width: 30rem;
+    height: 20rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-blend-mode: hard-light;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#d99585, 0.9),
+          rgba(#b39cd0, 0.9)
+        ),
+        url("../../imgs/sea-hike.jpg");
+      background-position: center;
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#5e8e6f, 0.9),
+          rgba(#b39cd0, 0.9)
+        ),
+        url("../../imgs/forest-hike.jpg");
+      background-position: bottom;
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#6499cd, 0.9),
+          rgba(#b39cd0, 0.9)
+        ),
+        url("../../imgs/mountain-hikers.jpg");
+      background-position: top 40%;
+    }
+
+    //   transform: skewY(-7deg);
+  }
+}
+
+.side__info {
+  padding: rem 0;
+  font-size: 1.8rem;
+  list-style: none;
+
+  &--point {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #281a4a;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 2.5rem;
+    }
+  }
+}

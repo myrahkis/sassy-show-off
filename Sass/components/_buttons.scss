@@ -1,0 +1,59 @@
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #49376c;
+    border-bottom: 1px solid #6b578f;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: #6b578f;
+    color: aliceblue;
+    box-shadow: 0 0.5rem 1.3rem rgba(#6b578f, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.25rem 0.7rem rgba(#6b578f, 10%);
+    transform: translateY(0);
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  @include btn-starter-pack;
+  padding: 2rem 3rem;
+  box-shadow: 0 0.5rem 2.5rem #4a4453;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem #4a4453;
+  }
+}
+
+.btn-all-tours {
+  @include btn-starter-pack;
+  @include btn-no-shadow-anim;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  align-self: center;
+}
+
+.btn-form {
+  @include btn-starter-pack;
+  @include btn-no-shadow-anim;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
