@@ -39,6 +39,7 @@
   &__checkbox:checked ~ &__btn ~ &__bg {
     transform: scale(60);
   }
+  &__checkbox:checked ~ &__btn ~ &__nav,
   &__checkbox:checked ~ &__btn ~ &__nav &__list {
     display: flex;
     flex-direction: column;
@@ -47,7 +48,7 @@
 
   &__nav {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -64,13 +65,13 @@
     transition: all 1s ease-in;
   }
 
-//   &__elem {
-//     // transition: all 0.2s;
+  //   &__elem {
+  //     // transition: all 0.2s;
 
-//     // &:hover {
-//     //   background-color: #b39cd0;
-//     // }
-//   }
+  //     // &:hover {
+  //     //   background-color: #b39cd0;
+  //     // }
+  //   }
 
   &__link {
     &:visited,
@@ -96,7 +97,7 @@
     }
 
     span {
-        margin-right: 1.5rem;
+      margin-right: 1.5rem;
     }
   }
 }

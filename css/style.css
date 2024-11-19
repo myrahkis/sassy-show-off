@@ -518,6 +518,7 @@ body {
 .navigation__checkbox:checked ~ .navigation__btn ~ .navigation__bg {
   transform: scale(60); }
 
+.navigation__checkbox:checked ~ .navigation__btn ~ .navigation__nav,
 .navigation__checkbox:checked ~ .navigation__btn ~ .navigation__nav .navigation__list {
   display: flex;
   flex-direction: column;
@@ -525,7 +526,7 @@ body {
 
 .navigation__nav {
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100vh;
