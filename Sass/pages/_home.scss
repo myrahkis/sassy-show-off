@@ -27,7 +27,7 @@
       rgba(#b39cd0, 0.7),
       rgba(#6b578f, 0.7)
     ),
-    url("../../imgs/bg.jpg");
+    url("../imgs/bg.jpg");
   background-size: cover;
 
   transform: skewY(-7deg);
@@ -69,7 +69,7 @@
       rgba(aliceblue, 0.7) 55%,
       transparent 55%
     ),
-    url(/imgs/form-bg.jpg);
+    url("../imgs/form-bg.jpg");
   background-size: 100%;
   height: 100%;
   border-radius: 5px;

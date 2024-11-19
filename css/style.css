@@ -70,7 +70,7 @@ body {
   align-items: center;
   height: 100vh;
   padding: 8rem 15rem;
-  background-image: linear-gradient(to right bottom, rgba(179, 156, 208, 0.7), rgba(107, 87, 143, 0.7)), url("../../imgs/bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(179, 156, 208, 0.7), rgba(107, 87, 143, 0.7)), url("../imgs/bg.jpg");
   background-size: cover;
   transform: skewY(-7deg); }
 
@@ -94,7 +94,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(179, 156, 208, 0.9), rgba(107, 87, 143, 0.9)); }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(240, 248, 255, 0.9) 0%, rgba(240, 248, 255, 0.7) 55%, transparent 55%), url(/imgs/form-bg.jpg);
+  background-image: linear-gradient(105deg, rgba(240, 248, 255, 0.9) 0%, rgba(240, 248, 255, 0.7) 55%, transparent 55%), url("../imgs/form-bg.jpg");
   background-size: 100%;
   height: 100%;
   border-radius: 5px;
@@ -345,13 +345,13 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
     .side__header--img--1 {
-      background-image: linear-gradient(to right bottom, rgba(217, 149, 133, 0.9), rgba(179, 156, 208, 0.9)), url("../../imgs/sea-hike.jpg");
+      background-image: linear-gradient(to right bottom, rgba(217, 149, 133, 0.9), rgba(179, 156, 208, 0.9)), url("../imgs/sea-hike.jpg");
       background-position: center; }
     .side__header--img--2 {
-      background-image: linear-gradient(to right bottom, rgba(94, 142, 111, 0.9), rgba(179, 156, 208, 0.9)), url("../../imgs/forest-hike.jpg");
+      background-image: linear-gradient(to right bottom, rgba(94, 142, 111, 0.9), rgba(179, 156, 208, 0.9)), url("../imgs/forest-hike.jpg");
       background-position: bottom; }
     .side__header--img--3 {
-      background-image: linear-gradient(to right bottom, rgba(100, 153, 205, 0.9), rgba(179, 156, 208, 0.9)), url("../../imgs/mountain-hikers.jpg");
+      background-image: linear-gradient(to right bottom, rgba(100, 153, 205, 0.9), rgba(179, 156, 208, 0.9)), url("../imgs/mountain-hikers.jpg");
       background-position: top 40%; }
 
 .side__info {
