@@ -16,3 +16,10 @@ body {
   background-color: whitesmoke;
   color:#341a4a;
 }
+
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    color: whitesmoke;
+  } 
+}
