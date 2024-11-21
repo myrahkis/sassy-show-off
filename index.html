@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="scripts/lazyLoading.js"></script>
     <title>Sassy</title>
   </head>
   <body>
@@ -391,11 +390,13 @@
             src="imgs/popup/popup-guy.jpg"
             alt="Tour photo"
             class="popup__img"
+            loading="lazy"
           />
           <img
             src="imgs/popup/popup-girl.jpg"
             alt="Tour photo"
             class="popup__img"
+            loading="lazy"
           />
         </div>
         <div class="popup__right">
@@ -423,4 +424,6 @@
       </div>
     </div>
   </body>
+  <script src="scripts/lazyLoadingImg.js"></script>
+  <script src="scripts/lazyLoadingBg.js"></script>
 </html>

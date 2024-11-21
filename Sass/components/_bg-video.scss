@@ -9,8 +9,12 @@
   opacity: 0.65;
 
   &__content {
-    // height: 100%;
+    
     width: 100%;
     object-fit: cover;
+
+    @include respond(m) {
+      height: 100%;
+    }
   }
 }

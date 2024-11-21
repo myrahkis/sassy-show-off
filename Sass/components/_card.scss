@@ -15,6 +15,11 @@
     transition: all 0.8s ease;
     backface-visibility: hidden;
 
+    @include respond(m) {
+      display: block;
+      width: 100%;
+    }
+
     &--back {
       position: absolute;
       top: 0;

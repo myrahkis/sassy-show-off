@@ -11,6 +11,11 @@
   &__icon {
     width: 8rem;
     height: 8rem;
+
+    @include respond(m) {
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   &:hover {

@@ -16,3 +16,37 @@
     transform: translateY(0);
   }
 }
+
+// MEDIA QUERY
+/* 
+0 - 600 extra small
+600 - 900 small
+900 - 1200 medium
+1200 - 1800 - large (desktop first)
+1800+ - extra large
+
+1em = 16px
+*/
+
+@mixin respond($size) {
+  @if ($size == xs) {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if ($size == s) {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if ($size == m) {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if ($size == xl) {
+    @media (max-width: 112.5em) {
+      @content;
+    }
+  }
+}
