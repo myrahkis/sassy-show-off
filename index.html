@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="scripts/lazyLoading.js"></script>
     <title>Sassy</title>
   </head>
   <body>
@@ -12,12 +13,12 @@
       <label for="navi-toggle" class="navigation__btn">
         <span
           ><img
-            src="imgs/menu.svg"
+            src="imgs/icons/menu.svg"
             alt="MENU"
             class="navigation__btn__icon navigation__btn__icon--open"
           />
           <img
-            src="imgs/close.svg"
+            src="imgs/icons/close.svg"
             alt="CLOSE"
             class="navigation__btn__icon navigation__btn__icon--close"
           />
@@ -83,19 +84,22 @@
           </div>
           <div class="composition">
             <img
-              src="imgs/img1.jpg"
+              src="imgs/low-res/img1_low-res.jpg"
+              data-src="imgs/about/img1.jpg"
               alt="img1"
-              class="composition__photo composition__photo--p1"
+              class="composition__photo composition__photo--p1 u-lazy-img"
             />
             <img
-              src="imgs/img3.jpg"
+              src="imgs/low-res/img3_low-res.jpg"
+              data-src="imgs/about/img3.jpg"
               alt="img3"
-              class="composition__photo composition__photo--p3"
+              class="composition__photo composition__photo--p3 u-lazy-img"
             />
             <img
-              src="imgs/img2.jpg"
+              src="imgs/low-res/img2_low-res.jpg"
+              data-src="imgs/about/img2.jpg"
               alt="img2"
-              class="composition__photo composition__photo--p2"
+              class="composition__photo composition__photo--p2 u-lazy-img"
             />
           </div>
         </div>
@@ -103,7 +107,11 @@
       <section class="section-features" id="features">
         <div class="features-grid">
           <div class="feature-box">
-            <img src="imgs/globe.svg" alt="globe" class="feature-box__icon" />
+            <img
+              src="imgs/icons/globe.svg"
+              alt="globe"
+              class="feature-box__icon"
+            />
             <h3 class="heading-tertiary">Explore the world</h3>
             <p class="paragraph">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -111,7 +119,11 @@
             </p>
           </div>
           <div class="feature-box">
-            <img src="imgs/compass.svg" alt="globe" class="feature-box__icon" />
+            <img
+              src="imgs/icons/compass.svg"
+              alt="globe"
+              class="feature-box__icon"
+            />
             <h3 class="heading-tertiary">Meet nature</h3>
             <p class="paragraph">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
@@ -119,7 +131,11 @@
             </p>
           </div>
           <div class="feature-box">
-            <img src="imgs/map.svg" alt="globe" class="feature-box__icon" />
+            <img
+              src="imgs/icons/map.svg"
+              alt="globe"
+              class="feature-box__icon"
+            />
             <h3 class="heading-tertiary">Find your way</h3>
             <p class="paragraph">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
@@ -127,7 +143,11 @@
             </p>
           </div>
           <div class="feature-box">
-            <img src="imgs/heart.svg" alt="globe" class="feature-box__icon" />
+            <img
+              src="imgs/icons/heart.svg"
+              alt="globe"
+              class="feature-box__icon"
+            />
             <h3 class="heading-tertiary">Live a healthier life</h3>
             <p class="paragraph">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quis
@@ -221,7 +241,7 @@
       <section class="section-stories" id="stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
-            <source src="imgs/bg-vid-2.mp4" type="video/mp4" />
+            <source src="imgs/bg/bg-vid-2.mp4" type="video/mp4" />
           </video>
         </div>
         <div class="u-center-text u-mb-big">
@@ -230,7 +250,7 @@
         <div class="container-centered">
           <div class="story">
             <figure class="story__shape">
-              <img src="imgs/ava-1.jpg" alt="ava-1" class="story__img" />
+              <img src="imgs/avas/ava-1.jpg" alt="ava-1" class="story__img" />
               <figcaption class="story__caption">Ruth Welly</figcaption>
             </figure>
             <div class="story__text">
@@ -250,7 +270,7 @@
           </div>
           <div class="story">
             <figure class="story__shape">
-              <img src="imgs/ava-2.jpg" alt="ava-2" class="story__img" />
+              <img src="imgs/avas/ava-2.jpg" alt="ava-2" class="story__img" />
               <figcaption class="story__caption">Ian Tomps</figcaption>
             </figure>
             <div class="story__text">
@@ -327,7 +347,7 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="imgs/logo.png" alt="Logo" class="footer__logo" />
+        <img src="imgs/icons/logo.png" alt="Logo" class="footer__logo" />
       </div>
       <div class="footer-grid">
         <div class="footer__nav">
@@ -367,11 +387,21 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="/imgs/popup-guy.jpg" alt="Tour photo" class="popup__img" />
-          <img src="/imgs/popup-girl.jpg" alt="Tour photo" class="popup__img" />
+          <img
+            src="imgs/popup/popup-guy.jpg"
+            alt="Tour photo"
+            class="popup__img"
+          />
+          <img
+            src="imgs/popup/popup-girl.jpg"
+            alt="Tour photo"
+            class="popup__img"
+          />
         </div>
         <div class="popup__right">
-          <a href="#tours"><img src="imgs/close.svg" alt="Close" class="popup__close" /></a>
+          <a href="#tours"
+            ><img src="imgs/icons/close.svg" alt="Close" class="popup__close"
+          /></a>
           <h2 class="heading-secondary u-mb-medium">Start booking now</h2>
           <h3 class="heading-tertiary u-mb-small">
             Important &ndash; Please read these terms before booking
