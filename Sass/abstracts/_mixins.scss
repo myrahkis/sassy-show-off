@@ -19,7 +19,8 @@
 
 // MEDIA QUERY
 /* 
-0 - 600 extra small
+0 - 500 extra extra small
+500 - 600 extra small
 600 - 900 small
 900 - 1200 medium
 1200 - 1800 - large (desktop first)
@@ -29,23 +30,28 @@
 */
 
 @mixin respond($size) {
+  @if ($size == xxs) {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
   @if ($size == xs) {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if ($size == s) {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
   @if ($size == m) {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
   @if ($size == xl) {
-    @media (max-width: 112.5em) {
+    @media only screen and (max-width: 112.5em) {
       @content;
     }
   }

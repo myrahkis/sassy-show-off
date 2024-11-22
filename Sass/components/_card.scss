@@ -1,6 +1,7 @@
 .card {
-  perspective: 150rem;
   -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
 
   &__side {
     position: relative;
@@ -13,17 +14,13 @@
     box-shadow: 0 0.5rem 2rem #281a4a;
     border-radius: 1rem;
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-
-    @include respond(m) {
-      display: block;
-      width: 100%;
-    }
 
     &--back {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 3.2rem;
       transform: rotateY(-180deg);
       width: 30rem;
       height: 42.6rem;
@@ -75,6 +72,41 @@
   }
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  @media only screen and (max-width: 75em), only screen and (hover: none) {
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem #281a4a;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &__side {
+      position: relative;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+      width: 40rem;
+
+      &--back {
+        position: relative;
+        transform: rotateY(0);
+        left: 0;
+        height: auto;
+        gap: 2rem;
+        padding: 4rem;
+        box-shadow: none;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &__price-value {
+      font-size: 4.5rem;
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
   }
 }
 
@@ -137,13 +169,16 @@
         url("../imgs/tours/mountain-hikers.jpg");
       background-position: top 40%;
     }
+  }
 
-    //   transform: skewY(-7deg);
+  @media only screen and (max-width: 75em), only screen and (hover: none) {
+    &--img {
+      width: 40rem;
+    }
   }
 }
 
 .side__info {
-  padding: rem 0;
   font-size: 1.8rem;
   list-style: none;
 
@@ -155,5 +190,11 @@
       border-bottom: none;
       padding-bottom: 2.5rem;
     }
+  }
+
+  @media only screen and (max-width: 75em), only screen and (hover: none) {
+    padding: 2.5rem 0;
+    padding-bottom: 0;
+    font-size: 2rem;
   }
 }

@@ -57,4 +57,20 @@
       transform: rotate(5deg) scale(1.2);
     }
   }
+
+  @include respond(s) {
+    padding: 6rem 7rem;
+
+    &__nav,
+    &__copyright {
+      padding: 2rem 1rem;
+    }
+    &__copyright {
+      padding-bottom: 0;
+    }
+  }
+  @include respond(xxs) {
+    padding: 5.5rem 5rem;
+    font-size: 1.4rem;
+  }
 }

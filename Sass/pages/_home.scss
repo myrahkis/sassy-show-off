@@ -4,6 +4,13 @@
   background-color: #f7f7f7;
   padding: 8rem 15rem;
 
+  @include respond(m) {
+    display: block;
+    padding: 8rem 10rem;
+  }
+  @include respond(s) {
+    height: fit-content;
+  }
   @include respond(xs) {
     padding: 8rem 7rem;
   }
@@ -19,6 +26,12 @@
   top: -5rem;
   z-index: 6;
 
+  @include respond(m) {
+    top: -6rem;
+  }
+  @include respond(s) {
+    top: -7.9rem;
+  }
   @include respond(xs) {
     top: -8.5rem;
   }
@@ -41,13 +54,16 @@
   transform: skewY(-7deg);
 
   @include respond(m) {
-    padding: 8rem 7rem;
+    padding: 8rem 10rem;
     justify-content: center;
     height: fit-content;
+    margin-top: 18rem;
   }
-
+  @include respond(s) {
+    margin-top: 0;
+  }
   @include respond(xs) {
-    padding: 8rem 7rem;
+    padding: 8rem 15rem;
   }
 }
 .visible {
@@ -72,6 +88,9 @@
   position: relative;
   padding: 8rem 15rem;
 
+  @include respond(m) {
+    padding: 8rem 10rem;
+  }
   @include respond(xs) {
     padding: 8rem 7rem;
   }
@@ -94,6 +113,11 @@
     rgba(#6b578f, 0.9)
   );
 
+  @include respond(m) {
+    height: fit-content;
+    padding: 8rem 10rem;
+  }
+
   @include respond(xs) {
     padding: 8rem 7rem;
   }
@@ -109,7 +133,7 @@
     ),
     url("../imgs/bg/form-bg.jpg");
   background-size: 100%;
-  height: 100%;
+  // height: 100%;
   border-radius: 5px;
   box-shadow: 0 1.5rem 3rem rgba(#281a4a, 0.5);
 
@@ -120,6 +144,49 @@
     &__header {
       font-size: 3.5rem;
       text-transform: uppercase;
+    }
+  }
+
+  @include respond(m) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(aliceblue, 0.9) 0%,
+        rgba(aliceblue, 0.7) 70%,
+        transparent 70%
+      ),
+      url("../imgs/bg/form-bg.jpg");
+    background-size: cover;
+
+    &-form {
+      width: 70%;
+    }
+  }
+
+  @include respond(s) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(aliceblue, 0.9) 0%,
+        rgba(aliceblue, 0.7) 70%,
+        transparent 70%
+      ),
+      url("../imgs/bg/form-bg.jpg");
+    background-size: cover;
+
+    &-form {
+      width: 70%;
+    }
+  }
+  @include respond(xxs) {
+    background-image: linear-gradient(
+        to right,
+        rgba(aliceblue, 0.75) 0%,
+        rgba(aliceblue, 0.75) 100%
+      ),
+      url("../imgs/bg/form-bg.jpg");
+    background-size: cover;
+
+    &-form {
+      width: 100%;
     }
   }
 }

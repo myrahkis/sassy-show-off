@@ -2,19 +2,35 @@
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   column-gap: 5rem;
+
+  @include respond(m) {
+    display: flex;
+    flex-direction: column;
+
+    .paragraph {
+      text-align: justify;
+    }
+  }
 }
 
 .features-grid {
   display: grid;
+  min-width: 100%;
   grid-template-columns: repeat(4, 0.8fr);
   column-gap: 6.5rem;
   transform: skewY(7deg);
 
   @include respond(m) {
+    max-width: 60%;
+    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 6.5rem;
+  }
+  @include respond(xs) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+    width: 100%;
   }
 }
 
@@ -36,4 +52,9 @@
   display: grid;
   column-gap: 10rem;
   grid-template-columns: 1fr 1fr;
+
+  @include respond(m) {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -74,4 +74,13 @@
       opacity: 0;
     }
   }
+
+  @include respond(xxs) {
+    width: 100%;
+    align-items: center;
+
+    &__input {
+      width: 100%;
+    }
+  }
 }

@@ -55,4 +55,17 @@
     filter: blur(3px) brightness(80%);
     transform: scale(1);
   }
+
+  @include respond(m) {
+    width: 100%;
+    transform: skew(0);
+
+    &__shape {
+      transform: translateX(-3rem) skew(0);
+    }
+
+    &__text {
+      transform: skew(0);
+    }
+  }
 }

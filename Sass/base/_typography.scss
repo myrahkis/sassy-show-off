@@ -17,6 +17,10 @@
 .heading-tertiary {
   font-size: 1.6rem;
   text-transform: uppercase;
+
+  @include respond(m) {
+    text-align: center;
+  }
 }
 
 .paragraph {
@@ -25,5 +29,9 @@
 
   &:not(:last-child) {
     margin-bottom: 2.5rem;
+  }
+
+  @include respond(m) {
+    text-align: start;
   }
 }

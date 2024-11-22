@@ -46,6 +46,10 @@
   &__left {
     width: 33.333333%;
     float: left;
+
+    @include respond(m) {
+      display: none;
+    }
   }
 
   &__right {
@@ -53,6 +57,11 @@
     float: right;
     font-size: 2rem;
     padding: 3.5rem;
+
+    @include respond(m) {
+      width: 100%;
+      float: none;
+    }
   }
 
   &__img {
